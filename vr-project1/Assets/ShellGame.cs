@@ -1,3 +1,11 @@
+/*
+ * todo:
+ * - VR implementation; make cups grabbable
+ * - when grabbing cup, lift the other two cups
+ * - correct cup detection
+ * - scoring system (get 3 correct?)
+ * */
+
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
