@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
+using VelUtils;
 
 public class TeleportToGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Rig rig;
+    [SerializeField] Transform spawn;
 
-    // Update is called once per frame
-    void Update()
+    public void Teleport()
     {
-        
+        Movement m = rig.GetComponent<Movement>();
+        m.TeleportTo(spawn.position, spawn.forward);
     }
 }
