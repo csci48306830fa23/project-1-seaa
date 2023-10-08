@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1834076461426528602
 Transform:
   m_ObjectHideFlags: 0
@@ -460,6 +460,7 @@ MonoBehaviour:
   - {fileID: 330919003154388511}
   - {fileID: 1991890517374290357}
   - {fileID: 5091180509192991332}
+  ball: {fileID: 0}
 --- !u!1 &6988485397945743898
 GameObject:
   m_ObjectHideFlags: 0
