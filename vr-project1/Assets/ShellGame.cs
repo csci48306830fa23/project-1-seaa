@@ -1,7 +1,8 @@
 /*
  * todo:
- * - VR implementation; make cups grabbable
  * - when grabbing cup, lift the other two cups
+ * - reset rotation of cups when restarting the game
+ * - just a general "restart game" thing
  * - correct cup detection
  * - scoring system (get 3 correct?)
  * */
@@ -12,6 +13,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using VelUtils;
 
 public class ShellGame : MonoBehaviour
 {
@@ -22,7 +24,15 @@ public class ShellGame : MonoBehaviour
     [SerializeField]
     GameObject ball;
 
-    int curBallPos = 0;
+    //[SerializeField]
+    //Cup cupObj;
+
+    [SerializeField]
+    AudioClip winSound;
+    [SerializeField]
+    AudioClip lossSound;
+
+    public int curBallPos = 0;
     float switchSpeed = 0.5f;
     bool currentlyShuffling = false;
 
@@ -83,27 +93,30 @@ public class ShellGame : MonoBehaviour
         {
             shuffle();
             shuffleTimes--;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(switchSpeed);
         }
         currentlyShuffling = false;
+
+        for (int i = 0; i < cups.Length; i++)
+        {
+            cups[i].GetComponent<Cup>().cupNum = i; // what
+        }
     }
 
-    /*private IEnumerator moveCups(GameObject cup1, GameObject cup2, Transform pos1, Transform pos2)
+    public void win()
     {
-        float xpos1 = cup1.transform.position.x;
-        var tweener = DOTween.To(() => xpos1, k => xpos1 = k, pos2.position.x, 1f)
-            .OnUpdate(() => cup1.transform.position = new Vector3(xpos1, cup1.transform.position.y, cup1.transform.position.z));
-        float xpos2 = cup1.transform.position.x;
-        var tweener2 = DOTween.To(() => xpos2, k => xpos2 = k, pos1.position.x, 1f)
-            .OnUpdate(() => cup2.transform.position = new Vector3(xpos2, cup2.transform.position.y, cup2.transform.position.z));
+        AudioSource.PlayClipAtPoint(winSound, this.transform.position);
+    }
 
-        while (tweener.IsActive() || tweener2.IsActive()) { yield return null; }
-    }*/
+    public void loss()
+    {
+        AudioSource.PlayClipAtPoint(lossSound, this.transform.position);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S) && !currentlyShuffling)
+        if (Input.GetButtonDown("VR_Button2_Right") && !currentlyShuffling)
         {
             StartCoroutine(fullShuffle());
         }
