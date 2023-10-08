@@ -656,10 +656,10 @@ PrefabInstance:
       addedObject: {fileID: 782628380}
     - targetCorrespondingSourceObject: {fileID: 7578919740422347464, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1390265676}
+      addedObject: {fileID: 1390265672}
     - targetCorrespondingSourceObject: {fileID: 7400124074617274568, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1746587080}
+      addedObject: {fileID: 1746587076}
   m_SourcePrefab: {fileID: 100100000, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
 --- !u!20 &782628376 stripped
 Camera:
@@ -1078,7 +1078,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7578919740422347464, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
   m_PrefabInstance: {fileID: 782628375}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1390265676
+--- !u!114 &1390265672
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1087,14 +1087,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1390265671}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 638a4f6cc7837f74fb510cfd7978bbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: 487d0dc74ed701849a7da00bd1cd83ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   raycastLength: 10
   currentRayLength: 0
   UILayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   autoEnable: 1
   ClickDown:
     m_PersistentCalls:
@@ -1108,12 +1108,15 @@ MonoBehaviour:
   HoverStop:
     m_PersistentCalls:
       m_Calls: []
+  input: 1
   side: 0
+  useLaser: 1
+  laserColor: {r: 0, g: 0, b: 0, a: 1}
+  laserThickness: 0.005
   vibrateOnClick: 0.5
   soundOnClick: {fileID: 0}
   vibrateOnHover: 0.1
   soundOnHover: {fileID: 0}
-  activationDistance: 0.02
 --- !u!1 &1728538191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1223,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7400124074617274568, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
   m_PrefabInstance: {fileID: 782628375}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1746587080
+--- !u!114 &1746587076
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1229,14 +1232,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1746587075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 638a4f6cc7837f74fb510cfd7978bbe3, type: 3}
+  m_Script: {fileID: 11500000, guid: 487d0dc74ed701849a7da00bd1cd83ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   raycastLength: 10
   currentRayLength: 0
   UILayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 32
   autoEnable: 1
   ClickDown:
     m_PersistentCalls:
@@ -1250,12 +1253,15 @@ MonoBehaviour:
   HoverStop:
     m_PersistentCalls:
       m_Calls: []
+  input: 1
   side: 1
+  useLaser: 1
+  laserColor: {r: 0, g: 0, b: 0, a: 1}
+  laserThickness: 0.005
   vibrateOnClick: 0.5
   soundOnClick: {fileID: 0}
   vibrateOnHover: 0.1
   soundOnHover: {fileID: 0}
-  activationDistance: 0.02
 --- !u!1001 &606069190306233542
 PrefabInstance:
   m_ObjectHideFlags: 0
