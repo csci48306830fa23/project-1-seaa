@@ -1035,6 +1035,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3854991079731159967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084778376472715379}
+  m_Layer: 0
+  m_Name: SoundSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084778376472715379
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3854991079731159967}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.843, y: 3.982, z: 5.171}
+  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8026957640172502748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4141795765618513070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1592,6 +1623,7 @@ Transform:
   - {fileID: 2435227528494323358}
   - {fileID: 7426280946796696062}
   - {fileID: 8500759531808439694}
+  - {fileID: 1084778376472715379}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3528707606766519671
@@ -1621,6 +1653,9 @@ MonoBehaviour:
   ball: {fileID: 2887953216900439024}
   winSound: {fileID: 8300000, guid: 77ba4c8c7b5510b4087c3b099c6e9609, type: 3}
   lossSound: {fileID: 8300000, guid: 93c77e5e01af57940b231c66d7d9c1e5, type: 3}
+  shuffleSound: {fileID: 8300000, guid: e6e9950d01b46ff43a2cb949e0061989, type: 3}
+  liftSound: {fileID: 8300000, guid: 82a60c0474438974aa5d72afc4307a82, type: 3}
+  soundSpawnLocation: {fileID: 1084778376472715379}
   scoreText: {fileID: 8007050851215747311}
   startButton: {fileID: 3422958920814189160}
   tweenTimer: {fileID: 466137254893749155}

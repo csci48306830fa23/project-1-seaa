@@ -36,6 +36,12 @@ public class ShellGame : MonoBehaviour
     AudioClip winSound;
     [SerializeField]
     AudioClip lossSound;
+    [SerializeField]
+    AudioClip shuffleSound;
+    [SerializeField]
+    AudioClip liftSound;
+    [SerializeField]
+    Transform soundSpawnLocation;
 
     [SerializeField]
     TMP_Text scoreText;
@@ -86,7 +92,9 @@ public class ShellGame : MonoBehaviour
         // swap physical positions of the two cups
         a.transform.DOMove(cupPositions[mod((pivot + 1) + 3, cups.Length)].transform.position, switchSpeed);
         b.transform.DOMove(cupPositions[mod((pivot - 1) + 3, cups.Length)].transform.position, switchSpeed);
-        
+
+        AudioSource.PlayClipAtPoint(shuffleSound, soundSpawnLocation.position);
+
         // swap positions of the cups in array
         GameObject c = a;
         cups[mod((pivot - 1)+3, cups.Length)] = b;
@@ -124,6 +132,7 @@ public class ShellGame : MonoBehaviour
         }
         curBallPos = Random.Range(0, cups.Length);
         ball.transform.DOMove(ballPositions[curBallPos].transform.position, 1f);
+        AudioSource.PlayClipAtPoint(liftSound, soundSpawnLocation.position);
 
         Tween tt = tweenTimer.transform.DOMoveX(1f, 2f); // lol??
         yield return tt.WaitForCompletion();
@@ -131,8 +140,10 @@ public class ShellGame : MonoBehaviour
         for (int i = 0; i < cups.Length; i++)
         {
             cups[i].transform.DOMoveY(cups[i].transform.position.y-0.5f, 1f);
+            cups[i].transform.eulerAngles = (new Vector3(-90, 0, 0)); // just in case LOL
             cups[i].GetComponent<Rigidbody>().useGravity = true;
         }
+        AudioSource.PlayClipAtPoint(liftSound, soundSpawnLocation.position);
 
         tt = tweenTimer.transform.DOMoveX(1f, 1.5f);
         yield return tt.WaitForCompletion();
@@ -159,7 +170,7 @@ public class ShellGame : MonoBehaviour
     {
         if (afterShuffle)
         {
-            AudioSource.PlayClipAtPoint(winSound, this.transform.position);
+            AudioSource.PlayClipAtPoint(winSound, soundSpawnLocation.position);
             score += 1;
             scoreText.text = "Score: " + score;
             switchSpeed -= 0.07f;
@@ -181,7 +192,7 @@ public class ShellGame : MonoBehaviour
     {
         if (afterShuffle)
         {
-            AudioSource.PlayClipAtPoint(lossSound, this.transform.position);
+            AudioSource.PlayClipAtPoint(lossSound, soundSpawnLocation.position);
             GameObject a = cups[mod((cupNum - 1) + 3, cups.Length)];
             GameObject b = cups[mod((cupNum + 1) + 3, cups.Length)];
 
@@ -197,6 +208,7 @@ public class ShellGame : MonoBehaviour
         b.transform.DOMoveY(b.transform.position.y + 0.5f, 1f);
         a.GetComponent<Rigidbody>().useGravity = false;
         b.GetComponent<Rigidbody>().useGravity = false;
+        AudioSource.PlayClipAtPoint(liftSound, soundSpawnLocation.position);
 
         Tween tt = tweenTimer.transform.DOMoveX(1f, 3f); // lol??
         yield return tt.WaitForCompletion();
@@ -205,6 +217,7 @@ public class ShellGame : MonoBehaviour
         b.transform.DOMoveY(b.transform.position.y - 0.5f, 1f);
         a.GetComponent<Rigidbody>().useGravity = true;
         b.GetComponent<Rigidbody>().useGravity = true;
+        AudioSource.PlayClipAtPoint(liftSound, soundSpawnLocation.position);
         currentlyShuffling = false;
     }
 
