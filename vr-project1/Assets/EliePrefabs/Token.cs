@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trophy1 : MonoBehaviour
+public class Token : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private bool pointsAdded = false;  
+    public int pointsToAdd = 1;    
+
+    public void OnGrab()
     {
-        
+        if (!pointsAdded)
+        {
+            GameManager.Instance.AddPoints(pointsToAdd);
+            pointsAdded = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
-        
+        base.GrabBegin(hand, grabPoint);
+        OnGrab();
     }
+
+    protected override void OnAttachedToHand(Hand hand)
+    {
+        base.OnAttachedToHand(hand);
+        OnGrab();
+    }
+
 }
