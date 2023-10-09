@@ -8,6 +8,8 @@ public class TrophyBox : MonoBehaviour
     public GameObject trophyPrize; 
     public Transform trophySpawnPoint; 
 
+    public AudioSource trophySoundSource;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Token"))
@@ -25,5 +27,14 @@ public class TrophyBox : MonoBehaviour
     void GiveTrophy()
     {
         Instantiate(trophyPrize, trophySpawnPoint.position, Quaternion.identity);
+        PlayTrophySound();
+    }
+
+    void PlayTrophySound()
+    {
+        if (trophySoundSource && !trophySoundSource.isPlaying)
+        {
+            trophySoundSource.Play();
+        }
     }
 }
