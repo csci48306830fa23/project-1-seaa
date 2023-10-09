@@ -23,9 +23,9 @@ public class Dart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rightHand = GameObject.Find("Right Hand").GetComponent<VRGrabbableHand>();
-        leftHand = GameObject.Find("Left Hand").GetComponent<VRGrabbableHand>();
-        bullsEyeText = GameObject.Find("BullsEye Text").GetComponent<BullsEyeText>();
+        //rightHand = GameObject.Find("Right Hand").GetComponent<VRGrabbableHand>();
+        //leftHand = GameObject.Find("Left Hand").GetComponent<VRGrabbableHand>();
+        //bullsEyeText = GameObject.Find("BullsEye Text").GetComponent<BullsEyeText>();
         //dartSpawnPoint = GameObject.Find("DartSpawnPoint").GetComponent<Transform>();
 
         if (leftHand != null && rightHand != null)
