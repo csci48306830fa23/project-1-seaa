@@ -1938,6 +1938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Tent
       objectReference: {fileID: 0}
+    - target: {fileID: 611127385298859434, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1048354364228706872, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.4712194
@@ -1993,8 +1997,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6269010397041661230, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 908396709}
   m_SourcePrefab: {fileID: 100100000, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+--- !u!1 &908396708 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6269010397041661230, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+  m_PrefabInstance: {fileID: 908396707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &908396709
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908396708}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8840971838307643388, guid: b4af1c7817d71554dbf438e6b13354b0, type: 3}
 --- !u!1001 &911455783
 PrefabInstance:
   m_ObjectHideFlags: 0
