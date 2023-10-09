@@ -141,6 +141,7 @@ public class ShellGame : MonoBehaviour
         {
             cups[i].transform.DOMoveY(cups[i].transform.position.y-0.5f, 1f);
             cups[i].transform.eulerAngles = (new Vector3(-90, 0, 0)); // just in case LOL
+            cups[i].GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
             cups[i].GetComponent<Rigidbody>().useGravity = true;
         }
         AudioSource.PlayClipAtPoint(liftSound, soundSpawnLocation.position);
