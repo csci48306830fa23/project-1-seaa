@@ -1429,6 +1429,37 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &6217077326697136271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4076583896388747849}
+  m_Layer: 0
+  m_Name: Position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4076583896388747849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6217077326697136271}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0.44189468, z: 0, w: 0.89706695}
+  m_LocalPosition: {x: 17.259405, y: 11.060109, z: 38.074043}
+  m_LocalScale: {x: 1.4285713, y: 1.4285715, z: 1.4285713}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8026957640172502748}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6255301985988602551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,6 +1750,7 @@ Transform:
   - {fileID: 8500759531808439694}
   - {fileID: 1084778376472715379}
   - {fileID: 2782722618749667125}
+  - {fileID: 4076583896388747849}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3528707606766519671
@@ -1746,6 +1778,7 @@ MonoBehaviour:
   - {fileID: 4472879099743340179}
   - {fileID: 8873819814035548659}
   ball: {fileID: 2887953216900439024}
+  position: {fileID: 0}
   winSound: {fileID: 8300000, guid: 77ba4c8c7b5510b4087c3b099c6e9609, type: 3}
   lossSound: {fileID: 8300000, guid: 93c77e5e01af57940b231c66d7d9c1e5, type: 3}
   shuffleSound: {fileID: 8300000, guid: e6e9950d01b46ff43a2cb949e0061989, type: 3}
@@ -1754,6 +1787,7 @@ MonoBehaviour:
   scoreText: {fileID: 8007050851215747311}
   startButton: {fileID: 3422958920814189160}
   tweenTimer: {fileID: 466137254893749155}
+  tokenPrefab: {fileID: 3349875943387963603, guid: eb5af7898d1384893be51085a5059dad, type: 3}
   curBallPos: 0
 --- !u!1 &6790491027378943804
 GameObject:

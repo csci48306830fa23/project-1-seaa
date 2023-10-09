@@ -29,8 +29,8 @@ public class ShellGame : MonoBehaviour
     [SerializeField]
     GameObject ball;
 
-    //[SerializeField]
-    //Cup cupObj;
+    [SerializeField]
+    Transform position;
 
     [SerializeField]
     AudioClip winSound;
@@ -50,6 +50,9 @@ public class ShellGame : MonoBehaviour
 
     [SerializeField]
     GameObject tweenTimer; // bro......................
+
+    [SerializeField]
+    GameObject tokenPrefab;
 
     public int curBallPos = 0;
     float switchSpeed = 0.5f;
@@ -255,7 +258,14 @@ public class ShellGame : MonoBehaviour
     // for later, idk lol
     public void spawnToken()
     {
-
+        if (tokenPrefab != null)
+        {
+            Instantiate(tokenPrefab, position.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Token Prefab not assigned in TokenSpawner!");
+        }
     }
 
     // Update is called once per frame
