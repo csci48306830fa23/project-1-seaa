@@ -15,4 +15,17 @@ public class HoleTrigger : MonoBehaviour
     {
         
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Bag")
+        {
+            Win();
+        }
+    }
+
+    public void Win()
+    {
+
+    }
 }
