@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Security.AccessControl;
 using System.Threading;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using VelUtils;
@@ -40,6 +41,9 @@ public class ShellGame : MonoBehaviour
     TMP_Text scoreText;
     [SerializeField]
     Button startButton;
+
+    [SerializeField]
+    GameObject tweenTimer; // bro......................
 
     public int curBallPos = 0;
     float switchSpeed = 0.5f;
@@ -107,25 +111,29 @@ public class ShellGame : MonoBehaviour
         {
             cups[i].GetComponent<VRMoveable>().enabled = false;
 
-            cups[i].transform.DOMoveX(cupPositions[i].transform.position.x, 3f);
-            cups[i].transform.DOMoveZ(cupPositions[i].transform.position.z, 3f);
-            cups[i].transform.DOMoveY(cupPositions[i].transform.position.y + 0.5f, 3f);
+            cups[i].transform.DOMoveX(cupPositions[i].transform.position.x, 1f);
+            cups[i].transform.DOMoveZ(cupPositions[i].transform.position.z, 1f);
+            cups[i].transform.DOMoveY(cupPositions[i].transform.position.y + 0.5f, 1f);
 
             cups[i].transform.eulerAngles = (new Vector3(0, 0, 0));
             cups[i].GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             cups[i].GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
+            cups[i].GetComponent<Rigidbody>().useGravity = false;
         }
         curBallPos = Random.Range(0, cups.Length);
         ball.transform.DOMove(ballPositions[curBallPos].transform.position, 1f);
 
-        yield return new WaitForSeconds(3f);
+        Tween tt = tweenTimer.transform.DOMoveX(1f, 2f); // lol??
+        yield return tt.WaitForCompletion();
 
         for (int i = 0; i < cups.Length; i++)
         {
-            cups[i].transform.DOMoveY(cupPositions[i].transform.position.y, 2f);
+            cups[i].transform.DOMoveY(cupPositions[i].transform.position.y, 1f);
+            cups[i].GetComponent<Rigidbody>().useGravity = true;
         }
 
-        yield return new WaitForSeconds(2f);
+        tt = tweenTimer.transform.DOMoveX(1f, 1.5f);
+        yield return tt.WaitForCompletion();
 
         // start shuffling
         int shuffleTimes = Random.Range(10, 16);
@@ -177,11 +185,20 @@ public class ShellGame : MonoBehaviour
 
     private IEnumerator liftCups(GameObject a, GameObject b)
     {
-        a.transform.DOMoveY(a.transform.position.y + 0.5f, 3f);
-        b.transform.DOMoveY(b.transform.position.y + 0.5f, 3f);
-        yield return new WaitForSeconds(3f);
-        a.transform.DOMoveY(a.transform.position.y - 0.5f, 2f);
-        b.transform.DOMoveY(b.transform.position.y - 0.5f, 2f);
+        currentlyShuffling = true;
+        a.transform.DOMoveY(a.transform.position.y + 0.5f, 1f);
+        b.transform.DOMoveY(b.transform.position.y + 0.5f, 1f);
+        a.GetComponent<Rigidbody>().useGravity = false;
+        b.GetComponent<Rigidbody>().useGravity = false;
+
+        Tween tt = tweenTimer.transform.DOMoveX(1f, 3f); // lol??
+        yield return tt.WaitForCompletion();
+
+        a.transform.DOMoveY(a.transform.position.y - 0.5f, 1f);
+        b.transform.DOMoveY(b.transform.position.y - 0.5f, 1f);
+        a.GetComponent<Rigidbody>().useGravity = true;
+        b.GetComponent<Rigidbody>().useGravity = true;
+        currentlyShuffling = false;
     }
 
     // lol can't call a coroutine from onClick
