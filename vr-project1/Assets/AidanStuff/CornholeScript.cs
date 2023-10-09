@@ -17,6 +17,6 @@ public class CornholeScript : MonoBehaviour
 
     void spawnBag()
     {
-        GameObject.Instantiate<GameObject>(bag, bagSpawn);
+        GameObject.Instantiate<GameObject>(bag, bagSpawn.position, Quaternion.identity);
     }
 }
