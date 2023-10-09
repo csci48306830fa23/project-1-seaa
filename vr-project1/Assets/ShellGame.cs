@@ -53,6 +53,8 @@ public class ShellGame : MonoBehaviour
 
     bool afterShuffle = false;
 
+    bool tokenWin = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -115,7 +117,7 @@ public class ShellGame : MonoBehaviour
             cups[i].transform.DOMoveZ(cupPositions[i].transform.position.z, 1f);
             cups[i].transform.DOMoveY(cupPositions[i].transform.position.y + 0.5f, 1f);
 
-            cups[i].transform.eulerAngles = (new Vector3(0, 0, 0));
+            cups[i].transform.eulerAngles = (new Vector3(-90, 0, 0));
             cups[i].GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             cups[i].GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
             cups[i].GetComponent<Rigidbody>().useGravity = false;
@@ -128,7 +130,7 @@ public class ShellGame : MonoBehaviour
 
         for (int i = 0; i < cups.Length; i++)
         {
-            cups[i].transform.DOMoveY(cupPositions[i].transform.position.y, 1f);
+            cups[i].transform.DOMoveY(cups[i].transform.position.y-0.5f, 1f);
             cups[i].GetComponent<Rigidbody>().useGravity = true;
         }
 
@@ -160,11 +162,16 @@ public class ShellGame : MonoBehaviour
             AudioSource.PlayClipAtPoint(winSound, this.transform.position);
             score += 1;
             scoreText.text = "Score: " + score;
-            switchSpeed -= 0.1f;
+            switchSpeed -= 0.07f;
 
             if (score >= 3)
             {
                 startButton.interactable = false;
+                if (!tokenWin)
+                {
+                    spawnToken();
+                    tokenWin = true;
+                }
             }
         }
         afterShuffle = false;
@@ -221,7 +228,7 @@ public class ShellGame : MonoBehaviour
             for (int i = 0; i < cups.Length; i++)
             {
                 cups[i].transform.position = cupPositions[i].transform.position;
-                cups[i].transform.eulerAngles = (new Vector3(0, 0, 0));
+                cups[i].transform.eulerAngles = (new Vector3(-90, 0, 0));
                 cups[i].GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
                 cups[i].GetComponent<Rigidbody>().angularVelocity = new Vector3(0, 0, 0);
             }
@@ -231,7 +238,11 @@ public class ShellGame : MonoBehaviour
         }
     }
 
+    // for later, idk lol
+    public void spawnToken()
+    {
 
+    }
 
     // Update is called once per frame
     void Update()
