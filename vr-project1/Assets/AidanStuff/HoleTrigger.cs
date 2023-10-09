@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class HoleTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    bool tokenWin = false;  
+    [SerializeField]
+    GameObject tokenPrefab;  
+
+    [SerializeField]
+    Transform position;
+    
+    void Start(){
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -26,6 +30,22 @@ public class HoleTrigger : MonoBehaviour
 
     public void Win()
     {
+        if (!tokenWin)
+            {
+                spawnToken();
+                tokenWin = true;
+            }
+    }
 
+    public void spawnToken()
+    {
+        if (tokenPrefab != null)
+        {
+            Instantiate(tokenPrefab, position.position, Quaternion.identity);
+        }
+        else
+        {
+            Debug.LogError("Token Prefab not assigned in TokenSpawner!");
+        }
     }
 }
