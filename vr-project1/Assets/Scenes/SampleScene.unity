@@ -229,6 +229,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 231195209}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &332152527 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1131421558, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
+  m_PrefabInstance: {fileID: 782628375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee9a4b7f66582a428455cac0a8e299e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &332152528 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1131421556, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
+  m_PrefabInstance: {fileID: 782628375}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee9a4b7f66582a428455cac0a8e299e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &344907461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -277,16 +299,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
+      propertyPath: leftHand
+      value: 
+      objectReference: {fileID: 332152527}
+    - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
+      propertyPath: rightHand
+      value: 
+      objectReference: {fileID: 332152528}
     - target: {fileID: 6867021901764997796, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: m_Name
       value: Sohan's Prefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 2783326150535920588, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1248799141}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5306167985871628331, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       insertIndex: -1
@@ -1187,11 +1214,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!4 &1248799141 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5258161244249931509, guid: 635eb2cc95d147b448d3ba6cb90f8400, type: 3}
-  m_PrefabInstance: {fileID: 426371773051679691}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1649024741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,3 +1640,4 @@ SceneRoots:
   - {fileID: 924003262}
   - {fileID: 761208415}
   - {fileID: 344907461}
+  - {fileID: 426371773051679691}
