@@ -16,16 +16,5 @@ public class Token : MonoBehaviour
         }
     }
 
-    public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
-    {
-        base.GrabBegin(hand, grabPoint);
-        OnGrab();
-    }
-
-    protected override void OnAttachedToHand(Hand hand)
-    {
-        base.OnAttachedToHand(hand);
-        OnGrab();
-    }
 
 }
