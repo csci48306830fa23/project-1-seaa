@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
     - target: {fileID: 919132149155446097, guid: b4af1c7817d71554dbf438e6b13354b0, type: 3}
       propertyPath: m_Name
-      value: circus tent
+      value: Blue Tent
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b4af1c7817d71554dbf438e6b13354b0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 993475468461025825, guid: b4af1c7817d71554dbf438e6b13354b0, type: 3}
       propertyPath: m_Materials.Array.data[0]
