@@ -18,7 +18,10 @@ public class Dart : MonoBehaviour
     Dart dartPrefab;
     [SerializeField]
     BullsEyeText bullsEyeText;
-    //[SerializeField]
+    [SerializeField]
+    Transform tokenSpawnPoint;
+    [SerializeField]
+    Token tokenPrefab;
     
     // Start is called before the first frame update
     void Start()
@@ -72,6 +75,7 @@ public class Dart : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
+        /*
         if (collision.gameObject.name == "BullsEye")
         {
             this.GetComponent<Rigidbody>().isKinematic = true;
@@ -81,14 +85,21 @@ public class Dart : MonoBehaviour
             this.GetComponent<Rigidbody>().isKinematic = true;
             this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
             this.GetComponent<Rigidbody>().useGravity = false;
-            /*
+            
+            
+            Token token = GameObject.Instantiate(tokenPrefab);
+            Rigidbody rb = token.GetComponent<Rigidbody>();
+            rb.position = tokenSpawnPoint.position;
+            
             GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
             AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
             audioSource.Play();
             Destroy(soundInstance, audioSource.clip.length);
-            */
+            
 
         }
+        */
+
         Debug.Log("collision detected");
         DartStand db = collision.gameObject.GetComponent<DartStand>();
         if (db != null)
