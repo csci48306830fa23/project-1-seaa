@@ -20,7 +20,7 @@ public class Cup : MonoBehaviour
                 main.win();
             } else
             {
-                main.loss();
+                main.loss(cupNum);
             }
         };
     }
