@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cornhole : MonoBehaviour
+public class CornholeScript : MonoBehaviour
 {
     [SerializeField] GameObject bag;
     [SerializeField] Transform bagSpawn;
@@ -16,7 +16,7 @@ public class Cornhole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void spawnBag()
