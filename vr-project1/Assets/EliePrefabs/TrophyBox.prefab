@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b94e7d01694e04dadaac10f00e485fee, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 469d8b0d0b8904fee82153a67b527cbb, type: 2}
     - target: {fileID: 919132149155446097, guid: b94e7d01694e04dadaac10f00e485fee, type: 3}
       propertyPath: m_Name
       value: TrophyBox
@@ -113,3 +117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7e39aeb255864214a863808fa04b03d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tokenCount: 0
+  trophyPrize: {fileID: 4592070669181049951, guid: 62aa73ca43ba04bae9969cd2797cc8c6, type: 3}
+  trophySpawnPoint: {fileID: 0}
