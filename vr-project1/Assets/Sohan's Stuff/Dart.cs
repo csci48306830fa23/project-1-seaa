@@ -33,6 +33,8 @@ public class Dart : MonoBehaviour
             leftHand.OnRelease += HandleDartRelease;
             rightHand.OnRelease += HandleDartRelease;
         }
+        this.GetComponent<Rigidbody>().isKinematic = false;
+        this.GetComponent<Rigidbody>().useGravity = true;
     }
 
     private void OnDestroy()
@@ -56,14 +58,16 @@ public class Dart : MonoBehaviour
                 }
                 rb.angularVelocity = Vector3.zero;  // Reset angular velocity to stop spinning
                 rb.velocity = rb.velocity * velocityMultiplier; //Double the release velocity of the dart
-
+                this.GetComponent<Rigidbody>().isKinematic = false;
+                this.GetComponent<Rigidbody>().useGravity = true;
             }
         }
     }
     // Update is called once per frame
     void Update()
     {
-
+        //this.GetComponent<Rigidbody>().isKinematic = false;
+        //this.GetComponent<Rigidbody>().useGravity = true;
     }
     
     private void OnCollisionEnter(Collision collision)
@@ -74,6 +78,9 @@ public class Dart : MonoBehaviour
             this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
             this.GetComponent<Rigidbody>().useGravity = false;
             bullsEyeText.GetComponent<MeshRenderer>().enabled = true;
+            this.GetComponent<Rigidbody>().isKinematic = true;
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            this.GetComponent<Rigidbody>().useGravity = false;
             /*
             GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
             AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
@@ -86,6 +93,9 @@ public class Dart : MonoBehaviour
         DartStand db = collision.gameObject.GetComponent<DartStand>();
         if (db != null)
         {
+            this.GetComponent<Rigidbody>().isKinematic = true;
+            this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
+            this.GetComponent<Rigidbody>().useGravity = false;
             this.GetComponent<Rigidbody>().isKinematic = true;
             this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
             this.GetComponent<Rigidbody>().useGravity = false;
@@ -115,7 +125,8 @@ public class Dart : MonoBehaviour
             */
             this.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             this.transform.position = dartSpawnPoint.transform.position;
-            
         }
+        this.GetComponent<Rigidbody>().isKinematic = false;
+        this.GetComponent<Rigidbody>().useGravity = true;
     }
 }
