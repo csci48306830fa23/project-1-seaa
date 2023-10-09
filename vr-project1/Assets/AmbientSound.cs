@@ -7,7 +7,7 @@ public class AmbientSound : MonoBehaviour
 {
 
     [SerializeField]
-    AudioClip ambient;
+    AudioSource ambient;
 
     // Start is called before the first frame update
     void Start()
