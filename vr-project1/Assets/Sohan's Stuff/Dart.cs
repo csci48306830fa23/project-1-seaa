@@ -140,4 +140,11 @@ public class Dart : MonoBehaviour
         this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().useGravity = true;
     }
+    public void returnToSpawn()
+    {
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
+        this.transform.position = dartSpawnPoint.transform.position;
+        this.GetComponent<Rigidbody>().isKinematic = false;
+        this.GetComponent<Rigidbody>().useGravity = true;
+    }
 }
