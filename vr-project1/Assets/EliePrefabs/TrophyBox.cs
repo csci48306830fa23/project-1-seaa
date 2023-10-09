@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class TrophyBox : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int tokenCount = 0;
+    public GameObject trophyPrize; 
+    public Transform trophySpawnPoint; 
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Token"))
+        {
+            Destroy(other.gameObject);
+            tokenCount++;
+
+            if (tokenCount == 3)
+            {
+                GiveTrophy();
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void GiveTrophy()
     {
-        
+        Instantiate(trophyPrize, trophySpawnPoint.position, Quaternion.identity);
     }
 }
