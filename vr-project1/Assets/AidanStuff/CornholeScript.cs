@@ -11,12 +11,8 @@ public class CornholeScript : MonoBehaviour
     void Start()
     {
         spawnBag();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        spawnBag();
+        spawnBag();
     }
 
     void spawnBag()

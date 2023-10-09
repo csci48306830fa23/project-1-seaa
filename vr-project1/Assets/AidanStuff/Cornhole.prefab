@@ -197,7 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cbb55c80f2c4a2c8d6efde0d88a3cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bag: {fileID: 0}
+  bag: {fileID: 8177896972420623531, guid: 00058d10c03837c4baa29929f44e6bb8, type: 3}
   bagSpawn: {fileID: 8208196220119910415}
 --- !u!1001 &2303122191972845527
 PrefabInstance:
