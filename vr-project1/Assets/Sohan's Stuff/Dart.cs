@@ -18,6 +18,8 @@ public class Dart : MonoBehaviour
     Dart dartPrefab;
     [SerializeField]
     BullsEyeText bullsEyeText;
+    [SerializeField]
+    public GameObject dartHitSoundPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Dart : MonoBehaviour
         leftHand = GameObject.Find("Left Hand").GetComponent<VRGrabbableHand>();
         bullsEyeText = GameObject.Find("BullsEye Text").GetComponent<BullsEyeText>();
         //dartSpawnPoint = GameObject.Find("DartSpawnPoint").GetComponent<Transform>();
+        dartHitSoundPrefab = GameObject.Find("dartHitSoundPrefab");
 
         if (leftHand != null && rightHand != null)
         {
@@ -72,6 +75,11 @@ public class Dart : MonoBehaviour
             this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
             this.GetComponent<Rigidbody>().useGravity = false;
             bullsEyeText.GetComponent<MeshRenderer>().enabled = true;
+            GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
+            AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
+            audioSource.Play();
+            Destroy(soundInstance, audioSource.clip.length);
+
         }
         Debug.Log("collision detected");
         DartStand db = collision.gameObject.GetComponent<DartStand>();
@@ -80,8 +88,13 @@ public class Dart : MonoBehaviour
             this.GetComponent<Rigidbody>().isKinematic = true;
             this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
             this.GetComponent<Rigidbody>().useGravity = false;
+            GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
+            AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
+            audioSource.Play();
+            Destroy(soundInstance, audioSource.clip.length);
+
         }
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
