@@ -6,12 +6,13 @@ public class Token : MonoBehaviour
 {
     private bool pointsAdded = false;  
     public int pointsToAdd = 1;    
+    public GameData gameData;
 
     public void OnGrab()
     {
         if (!pointsAdded)
         {
-            GameManager.Instance.AddPoints(pointsToAdd);
+            gameData.tokensCollected++;
             pointsAdded = true;
         }
     }

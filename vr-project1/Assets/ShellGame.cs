@@ -41,6 +41,8 @@ public class ShellGame : MonoBehaviour
     [SerializeField]
     AudioClip liftSound;
     [SerializeField]
+    AudioClip coinSound;
+    [SerializeField]
     Transform soundSpawnLocation;
 
     [SerializeField]
@@ -186,6 +188,7 @@ public class ShellGame : MonoBehaviour
                 {
                     spawnToken();
                     tokenWin = true;
+                    AudioSource.PlayClipAtPoint(coinSound, soundSpawnLocation.position);
                 }
             }
         }

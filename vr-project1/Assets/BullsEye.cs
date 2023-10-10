@@ -2,21 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BullsEye : MonoBehaviour
 {
     [SerializeField]
     Token tokenPrefab;
     [SerializeField]
-    BullsEyeText bullsEyeText;
-    [SerializeField]
     Transform tokenSpawnPoint;
     [SerializeField]
-    Dart dartPrefab1;
-    [SerializeField]
-    Dart dartPrefab2;
-    [SerializeField]
-    Dart dartPrefab3;
+    BullsEyeText bullsEyeText;
+
 
     Boolean tokenSpawned = false;
     // Start is called before the first frame update
@@ -36,22 +32,22 @@ public class BullsEye : MonoBehaviour
         Dart d = collision.gameObject.GetComponent<Dart>();
         if (d != null)
         {
-            d.GetComponent<Rigidbody>().isKinematic = true;
-            d.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            d.GetComponent<Rigidbody>().useGravity = false;
+            d.stick();
+            d.hitSound();
             bullsEyeText.GetComponent<MeshRenderer>().enabled = true;
-            d.GetComponent<Rigidbody>().isKinematic = true;
-            d.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            d.GetComponent<Rigidbody>().useGravity = false;
 
             if (!tokenSpawned)
             {
+                tokenSpawned = true;
+                Instantiate(tokenPrefab, tokenSpawnPoint.position, Quaternion.identity);
+                /*
                 Token token = GameObject.Instantiate(tokenPrefab);
-                Rigidbody rb = token.GetComponent<Rigidbody>();
+                Rigidbody rb = tokenPrefab.GetComponent<Rigidbody>();
                 rb.position = tokenSpawnPoint.position;
                 rb.GetComponent<Rigidbody>().isKinematic = false;
                 rb.GetComponent<Rigidbody>().useGravity = true;
-                tokenSpawned = true;
+                */
+                
             }
             /*
             GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);

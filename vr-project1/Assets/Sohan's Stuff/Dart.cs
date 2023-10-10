@@ -54,7 +54,7 @@ public class Dart : MonoBehaviour
     }
     private void HandleDartRelease(VRGrabbable grabbedObject)
     {
-        if (grabbedObject.gameObject == this.gameObject)  // Check if the released object is this Dart
+        if (grabbedObject?.gameObject == this.gameObject)  // Check if the released object is this Dart
         {
             Rigidbody rb = GetComponent<Rigidbody>();
             if (rb != null)
@@ -111,6 +111,7 @@ public class Dart : MonoBehaviour
             stick();
             //playSound = true;
             hitSound();
+            
 
 
         }
@@ -155,7 +156,7 @@ public class Dart : MonoBehaviour
         MissedDartTrigger mdt = other.attachedRigidbody?.GetComponent<MissedDartTrigger>();
         if (mdt != null)
         {
-
+            
             returnToSpawn();
         }
         //this.GetComponent<Rigidbody>().isKinematic = false;
@@ -165,14 +166,17 @@ public class Dart : MonoBehaviour
 
     public void returnToSpawn()
     {
+        playSound = true; 
+        this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
         this.transform.position = dartSpawnPoint.transform.position;
-        this.GetComponent<Rigidbody>().isKinematic = false;
+        
         this.GetComponent<Rigidbody>().useGravity = true;
         this.playSound = true;
     }
     public void stick()
     {
+        this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
         this.GetComponent<Rigidbody>().isKinematic = true;
 
@@ -184,6 +188,7 @@ public class Dart : MonoBehaviour
     {
         if (playSound)
         {
+            playSound = false;
             GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
             AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
             audioSource.Play();
