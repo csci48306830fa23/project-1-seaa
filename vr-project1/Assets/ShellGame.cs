@@ -188,6 +188,7 @@ public class ShellGame : MonoBehaviour
                 {
                     spawnToken();
                     tokenWin = true;
+                    AudioSource.PlayClipAtPoint(coinSound, soundSpawnLocation.position);
                 }
             }
         }
