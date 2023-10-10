@@ -10,7 +10,7 @@ public class TrophyBox : MonoBehaviour
     public GameObject tokenPrefab;
     public GameObject trophyPrize; 
     public Transform trophySpawnPoint; 
-    public Vector3 spawnOffset = new Vector3(0, 1, 0);
+    private Vector3 spawnOffset = new Vector3(0, 1, 0);
     public Button depositButton;
 
     public AudioSource trophySoundSource;
