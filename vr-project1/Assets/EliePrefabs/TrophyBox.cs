@@ -15,6 +15,8 @@ public class TrophyBox : MonoBehaviour
 
     public AudioSource trophySoundSource;
 
+    public AudioClip coinSound;
+
     private void Start() 
     {
        
@@ -26,7 +28,8 @@ public class TrophyBox : MonoBehaviour
         {
             Destroy(collision.gameObject);
             tokenCount++;
-
+            AudioSource.PlayClipAtPoint(coinSound, trophySoundSource.transform.position);
+            
             if (tokenCount >= 2)
             {
                 GiveTrophy();
