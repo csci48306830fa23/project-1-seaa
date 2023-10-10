@@ -22,9 +22,9 @@ public class TrophyBox : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-         if (collision.gameObject.CompareTag("Token"))
+         if (other.gameObject.CompareTag("Token"))
         {
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
             tokenCount++;
 
             if (tokenCount >= 2)
