@@ -24,13 +24,16 @@ public class TrophyBox : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
-        tokenCount++;
-        AudioSource.PlayClipAtPoint(coinSound, trophySoundSource.transform.position);
-        
-        if (tokenCount >= 2)
+        if (collision.gameObject == tokenPrefab) 
         {
-            GiveTrophy();
+            Destroy(collision.gameObject);
+            tokenCount++;
+            AudioSource.PlayClipAtPoint(coinSound, trophySoundSource.transform.position);
+            
+            if (tokenCount >= 2)
+            {
+                GiveTrophy();
+            }
         }
     }
 
