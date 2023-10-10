@@ -2,15 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BullsEye : MonoBehaviour
 {
     [SerializeField]
     Token tokenPrefab;
     [SerializeField]
-    BullsEyeText bullsEyeText;
-    [SerializeField]
     Transform tokenSpawnPoint;
+    [SerializeField]
+    BullsEyeText bullsEyeText;
+
 
     Boolean tokenSpawned = false;
     // Start is called before the first frame update
@@ -37,11 +39,14 @@ public class BullsEye : MonoBehaviour
             if (!tokenSpawned)
             {
                 tokenSpawned = true;
+                Instantiate(tokenPrefab, tokenSpawnPoint.position, Quaternion.identity);
+                /*
                 Token token = GameObject.Instantiate(tokenPrefab);
-                Rigidbody rb = token.GetComponent<Rigidbody>();
+                Rigidbody rb = tokenPrefab.GetComponent<Rigidbody>();
                 rb.position = tokenSpawnPoint.position;
                 rb.GetComponent<Rigidbody>().isKinematic = false;
                 rb.GetComponent<Rigidbody>().useGravity = true;
+                */
                 
             }
             /*
