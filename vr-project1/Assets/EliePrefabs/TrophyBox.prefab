@@ -102,8 +102,6 @@ MonoBehaviour:
   tokenCount: 0
   gameData: {fileID: 11400000, guid: 3ea7b44a43ed84284a4046ed1813f169, type: 2}
   tokenPrefab: {fileID: 3349875943387963603, guid: eb5af7898d1384893be51085a5059dad, type: 3}
-  trophyPrize: {fileID: 188465891199106765, guid: 4ac194a0c4cbb4faf86c72d4a4d9f433, type: 3}
-  trophySpawnPoint: {fileID: 0}
-  depositButton: {fileID: 3915189637563176525, guid: dc9f10ed0a1f1451dac0462ac872ecc8, type: 3}
+  trophyPrize: {fileID: 919132149155446097, guid: d75b984602ee148328a47c33453b9d2c, type: 3}
   trophySoundSource: {fileID: 0}
   coinSound: {fileID: 8300000, guid: a1624f602abfe43fab6717ce5e679f3f, type: 3}
