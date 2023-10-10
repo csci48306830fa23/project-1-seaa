@@ -1,56 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VelUtils;
 
 
 public class TrajectoryManager : MonoBehaviour
 {
-    [System.Serializable]
-    public class TrajectoryData
+    private struct TrajectoryData
     {
         public Vector3 position;
         public Vector3 upVector;
         public Vector3 forwardVector;
-        public float timeStamp;
+        public Vector3 velocity;
     }
 
-    public List<TrajectoryData> trajectoryDataList = new List<TrajectoryData>();
-
-    // Visualization
+    private List<TrajectoryData> trajectoryList = new List<TrajectoryData>();
+    private Vector3 lastPosition;
     private LineRenderer lineRenderer;
+
+    private VRObject vrObject; 
 
     private void Start()
     {
         lineRenderer = gameObject.AddComponent<LineRenderer>();
+        lineRenderer.material = new Material(Shader.Find("Standard"));
+        
+        vrObject = GetComponent<VRObject>();
+
+        if (vrObject == null)
+        {
+            Debug.LogError("VRObject script not found on this GameObject.");
+            return;
+        }
+
+        lastPosition = vrObject.transform.position;
     }
 
     private void Update()
     {
-        CollectData();
-    }
+        Vector3 currentPosition = vrObject.transform.position;
+        Vector3 currentVelocity = (currentPosition - lastPosition) / Time.deltaTime;
 
-    void CollectData()
-    {
         TrajectoryData data = new TrajectoryData
         {
-            position = transform.position,
-            upVector = transform.up,
-            forwardVector = transform.forward,
-            timeStamp = Time.time
+            position = currentPosition,
+            upVector = vrObject.transform.up,
+            forwardVector = vrObject.transform.forward,
+            velocity = currentVelocity
         };
 
-        trajectoryDataList.Add(data);
-    }
-
-    public void ShowTrajectory()
-    {
-        if (lineRenderer == null) return;
-
-        lineRenderer.positionCount = trajectoryDataList.Count;
-
-        for (int i = 0; i < trajectoryDataList.Count; i++)
-        {
-            lineRenderer.SetPosition(i, trajectoryDataList[i].position);
-        }
+        trajectoryList.Add(data);
+        lastPosition = currentPosition;  
+        
     }
 }
+
+
