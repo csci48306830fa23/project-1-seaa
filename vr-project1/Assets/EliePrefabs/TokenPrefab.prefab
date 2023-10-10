@@ -86,7 +86,7 @@ PrefabInstance:
       addedObject: {fileID: -4859851863285016373}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f035b2b1417dc4d679cbbffcbfffee57, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8382070548721948125}
+      addedObject: {fileID: 8850797945290522824}
   m_SourcePrefab: {fileID: 100100000, guid: f035b2b1417dc4d679cbbffcbfffee57, type: 3}
 --- !u!1 &3349875943387963603 stripped
 GameObject:
@@ -138,7 +138,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToAdd: 1
---- !u!114 &-8382070548721948125
+--- !u!114 &8850797945290522824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,24 +178,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 3349875943387963603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dee9a4b7f66582a428455cac0a8e299e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ba24a4b8fcfec74793670a745ab074a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rig: {fileID: 0}
-  side: 0
-  canGrab: 1
-  grabInput: 2
-  distanceGrabInput: 1
-  vibrateOnGrab: 1
-  autograb: 1
-  autograbTimeout: 0
-  enableRemoteGrabbing: 1
-  remoteGrabbingDistance: 5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  grabbedVRGrabbable: {fileID: 0}
-  selectedVRGrabbable: {fileID: 0}
-  touchedObjs: []
-  remoteTouchedObjs: []
-  raycastedObjs: []
+  listOfGrabbedByHands: []
+  priority: 0
+  remoteGrabbable: 0
+  colorChange: 1
+  highlightColor: {r: 0, g: 1, b: 0, a: 1}
+  highlightMeshes: []
+  highlightObjs: []
+  locallyOwned: 1
+  networkGrabbed: 0
+  useVelocityFollow: 1
+  setKinematic: 1
+  releaseVelocitySmoothing: 1
+  useFixedPositionOffset: 0
+  fixedPositionOffset: {x: 0, y: 0, z: 0}
+  useFixedRotationOffset: 0
+  fixedRotationOffset: {x: 0, y: 0, z: 0, w: 1}
