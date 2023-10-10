@@ -23,13 +23,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973207029069041579}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.377, y: 1.5, z: 0.312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1848647629695903903}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3038145169839548294
 GameObject:
@@ -55,13 +55,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3038145169839548294}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.86602545, z: -0, w: 0.49999994}
   m_LocalPosition: {x: -23.98, y: 9.08, z: 4.76}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1848647629695903903}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1443014815493854716
 AudioSource:
@@ -182,25 +182,24 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4001035966594768524}
-  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.015141, y: 0.6827338, z: 22.330812}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2439064825477218349}
   - {fileID: 4731157242712404967}
   - {fileID: 6053861374599293806}
   - {fileID: 7897518442673914133}
+  - {fileID: 2439064825477218349}
   - {fileID: 691239704284962259}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1737562996528924067
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 1848647629695903903}
     m_Modifications:
     - target: {fileID: 5980413653590715646, guid: a1ce9e630c8454614840c35049d68199, type: 3}
@@ -260,9 +259,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1ce9e630c8454614840c35049d68199, type: 3}
 --- !u!4 &4731157242712404967 stripped
 Transform:
@@ -274,12 +270,15 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 1848647629695903903}
     m_Modifications:
     - target: {fileID: 416389528730040450, guid: bd0a32bdb40e0794584d1f55237e776e, type: 3}
       propertyPath: m_Name
       value: Blue Tent
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048354364228706872, guid: bd0a32bdb40e0794584d1f55237e776e, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1048354364228706872, guid: bd0a32bdb40e0794584d1f55237e776e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -322,9 +321,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd0a32bdb40e0794584d1f55237e776e, type: 3}
 --- !u!4 &7897518442673914133 stripped
 Transform:
@@ -336,7 +332,6 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    serializedVersion: 3
     m_TransformParent: {fileID: 1848647629695903903}
     m_Modifications:
     - target: {fileID: -8650619723577054474, guid: ac5fed41144e548ccbda16ac74185903, type: 3}
@@ -355,6 +350,10 @@ PrefabInstance:
       propertyPath: trophySoundSource
       value: 
       objectReference: {fileID: 1443014815493854716}
+    - target: {fileID: 5116702667504736254, guid: ac5fed41144e548ccbda16ac74185903, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5116702667504736254, guid: ac5fed41144e548ccbda16ac74185903, type: 3}
       propertyPath: m_LocalScale.y
       value: 0.009999999
@@ -408,9 +407,6 @@ PrefabInstance:
       value: TrophyBox
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac5fed41144e548ccbda16ac74185903, type: 3}
 --- !u!4 &2439064825477218349 stripped
 Transform:

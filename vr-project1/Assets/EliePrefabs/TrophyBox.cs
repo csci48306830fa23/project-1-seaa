@@ -9,9 +9,7 @@ public class TrophyBox : MonoBehaviour
     public GameData gameData;
     public GameObject tokenPrefab;
     public GameObject trophyPrize; 
-    public Transform trophySpawnPoint; 
     private Vector3 spawnOffset = new Vector3(0, 1, 0);
-    public Button depositButton;
 
     public AudioSource trophySoundSource;
 
@@ -24,7 +22,7 @@ public class TrophyBox : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag =="Token")
+        if (collision.gameObject.tag == "Token")
         {
             Destroy(collision.gameObject);
             tokenCount++;
@@ -45,7 +43,7 @@ public class TrophyBox : MonoBehaviour
   
     void GiveTrophy()
     {
-        Instantiate(trophyPrize, trophySpawnPoint.position, Quaternion.identity);
+        Instantiate(trophyPrize, this.transform.position+new Vector3(0,2,0), Quaternion.identity);
         PlayTrophySound();
         TrajectoryManager trajectoryManager = FindObjectOfType<TrajectoryManager>();
         if (trajectoryManager != null)
