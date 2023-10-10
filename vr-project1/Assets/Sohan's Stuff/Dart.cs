@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,9 @@ public class Dart : MonoBehaviour
     Transform tokenSpawnPoint;
     [SerializeField]
     Token tokenPrefab;
+    [SerializeField]
+    GameObject dartHitSoundPrefab;
+    public Boolean playSound = true;
     
     // Start is called before the first frame update
     void Start()
@@ -104,23 +108,25 @@ public class Dart : MonoBehaviour
         DartStand db = collision.gameObject.GetComponent<DartStand>();
         if (db != null)
         {
-            this.GetComponent<Rigidbody>().isKinematic = true;
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            this.GetComponent<Rigidbody>().useGravity = false;
-            this.GetComponent<Rigidbody>().isKinematic = true;
-            this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
-            this.GetComponent<Rigidbody>().useGravity = false;
-            /*
-            GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
-            AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
-            audioSource.Play();
-            Destroy(soundInstance, audioSource.clip.length);
-            */
+            stick();
+            //playSound = true;
+            hitSound();
+
 
         }
+        /*
+
+        DartTable dt = collision.gameObject.GetComponent<DartTable>();
+        if (dt != null)
+        {
+            playSound = true;
+            hitSound(); 
+        }
+        */
 
     }
 
+    /*
     private void OnTriggerEnter(Collider other)
     {
 
@@ -133,18 +139,56 @@ public class Dart : MonoBehaviour
             Dart dart = GameObject.Instantiate(dartPrefab);
             Rigidbody rb = dart.GetComponent<Rigidbody>();
             rb.position = dartSpawnPoint.transform.position;
-            */
+            
             this.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
             this.transform.position = dartSpawnPoint.transform.position;
         }
         this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().useGravity = true;
     }
+    */
+    
+    private void OnTriggerExit(Collider other)
+    {
+
+
+        MissedDartTrigger mdt = other.attachedRigidbody?.GetComponent<MissedDartTrigger>();
+        if (mdt != null)
+        {
+
+            returnToSpawn();
+        }
+        //this.GetComponent<Rigidbody>().isKinematic = false;
+        //this.GetComponent<Rigidbody>().useGravity = true;
+    }
+    
+
     public void returnToSpawn()
     {
         this.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
         this.transform.position = dartSpawnPoint.transform.position;
         this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().useGravity = true;
+        this.playSound = true;
+    }
+    public void stick()
+    {
+        this.GetComponent<Rigidbody>().isKinematic = true;
+        this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
+        
+        //this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
+        this.GetComponent<Rigidbody>().useGravity = false;
+    }
+    public void hitSound()
+    {
+        if (playSound)
+        {
+            GameObject soundInstance = Instantiate(dartHitSoundPrefab, transform.position, Quaternion.identity);
+            AudioSource audioSource = soundInstance.GetComponent<AudioSource>();
+            audioSource.Play();
+            Destroy(soundInstance, audioSource.clip.length);
+            playSound = false;
+        }
+
     }
 }
