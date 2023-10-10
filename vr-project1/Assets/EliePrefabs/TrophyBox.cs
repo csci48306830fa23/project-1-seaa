@@ -24,7 +24,7 @@ public class TrophyBox : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == tokenPrefab) 
+        if (collision.gameObject.tag =="Token")
         {
             Destroy(collision.gameObject);
             tokenCount++;
