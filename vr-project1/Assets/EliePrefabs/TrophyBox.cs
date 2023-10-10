@@ -20,11 +20,11 @@ public class TrophyBox : MonoBehaviour
        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-         if (other.gameObject.CompareTag("Token"))
+        if (collision.gameObject.CompareTag("Token"))
         {
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
             tokenCount++;
 
             if (tokenCount >= 2)
@@ -32,7 +32,6 @@ public class TrophyBox : MonoBehaviour
                 GiveTrophy();
             }
         }
-
     }
 
     private bool CheckTokens()
