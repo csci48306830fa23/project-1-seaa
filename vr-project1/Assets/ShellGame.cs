@@ -41,6 +41,8 @@ public class ShellGame : MonoBehaviour
     [SerializeField]
     AudioClip liftSound;
     [SerializeField]
+    AudioClip coinSound;
+    [SerializeField]
     Transform soundSpawnLocation;
 
     [SerializeField]

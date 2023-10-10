@@ -1783,6 +1783,7 @@ MonoBehaviour:
   lossSound: {fileID: 8300000, guid: 93c77e5e01af57940b231c66d7d9c1e5, type: 3}
   shuffleSound: {fileID: 8300000, guid: e6e9950d01b46ff43a2cb949e0061989, type: 3}
   liftSound: {fileID: 8300000, guid: 82a60c0474438974aa5d72afc4307a82, type: 3}
+  coinSound: {fileID: 8300000, guid: fcb4e665ddb5e6846aef87014eeb2bdb, type: 3}
   soundSpawnLocation: {fileID: 1084778376472715379}
   scoreText: {fileID: 8007050851215747311}
   startButton: {fileID: 3422958920814189160}
