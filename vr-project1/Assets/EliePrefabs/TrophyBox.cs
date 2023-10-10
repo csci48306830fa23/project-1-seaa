@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TrophyBox : MonoBehaviour
 {
     public int tokenCount = 0;
+    public GameData gameData;
     [SerializeField]
     GameObject player;
     public GameObject tokenPrefab;
@@ -26,7 +27,11 @@ public class TrophyBox : MonoBehaviour
     {
          if (other.gameObject == player)
         {
+            if (CheckTokens())
+            {
                 depositButton.gameObject.SetActive(true);
+            }
+                
         }
 
     }
@@ -39,6 +44,11 @@ public class TrophyBox : MonoBehaviour
         }
     }
 
+    private bool CheckTokens()
+    {
+        return (gameData.tokensCollected >= 2);
+       
+    }
     public void OnDepositButtonClicked()
     {
         Renderer trophyBoxRenderer = GetComponent<Renderer>();
