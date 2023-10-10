@@ -1808,10 +1808,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 346690777478819826, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
     - target: {fileID: 416389528730040450, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
       propertyPath: m_Name
       value: Red Tent (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 611127385298859434, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
     - target: {fileID: 1048354364228706872, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.73100567
@@ -1864,6 +1872,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1303104814459481233, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
+    - target: {fileID: 1518463252880468841, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
+    - target: {fileID: 4176592709819220247, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
+    - target: {fileID: 6806406432473446483, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
+    - target: {fileID: 8659805198149784336, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
+    - target: {fileID: 8701376137047321901, guid: 5bf6c9cf0918f70479b8a889657cf0eb, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1c210b74e61ec4f43af83ea3708aa029, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4081,3 +4113,4 @@ SceneRoots:
   - {fileID: 1849941730648433670}
   - {fileID: 6215799348643192259}
   - {fileID: 1798819135}
+  - {fileID: 168925238}
