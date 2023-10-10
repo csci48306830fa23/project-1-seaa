@@ -74,18 +74,34 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b94e7d01694e04dadaac10f00e485fee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8374032557981758794}
+      addedObject: {fileID: 503074807033022261}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b94e7d01694e04dadaac10f00e485fee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 503074807033022261}
+      addedObject: {fileID: -8650619723577054474}
   m_SourcePrefab: {fileID: 100100000, guid: b94e7d01694e04dadaac10f00e485fee, type: 3}
 --- !u!1 &5497203391481875780 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b94e7d01694e04dadaac10f00e485fee, type: 3}
   m_PrefabInstance: {fileID: 4650129935876534293}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &-8374032557981758794
-BoxCollider:
+--- !u!114 &503074807033022261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5497203391481875780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7e39aeb255864214a863808fa04b03d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tokenCount: 0
+  trophyPrize: {fileID: 4592070669181049951, guid: 62aa73ca43ba04bae9969cd2797cc8c6, type: 3}
+  trophySpawnPoint: {fileID: 0}
+  trophySoundSource: {fileID: 0}
+--- !u!135 &-8650619723577054474
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -103,20 +119,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 86.65103, y: 116.29056, z: 89.05386}
+  m_Radius: 150
   m_Center: {x: 0, y: 5.818858e-14, z: 44.266594}
---- !u!114 &503074807033022261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5497203391481875780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7e39aeb255864214a863808fa04b03d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tokenCount: 0
-  trophyPrize: {fileID: 4592070669181049951, guid: 62aa73ca43ba04bae9969cd2797cc8c6, type: 3}
-  trophySpawnPoint: {fileID: 0}
