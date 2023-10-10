@@ -28,6 +28,15 @@ public class TrophyBox : MonoBehaviour
     {
         Instantiate(trophyPrize, trophySpawnPoint.position, Quaternion.identity);
         PlayTrophySound();
+        TrajectoryManager trajectoryManager = FindObjectOfType<TrajectoryManager>();
+        if (trajectoryManager != null)
+        {
+            trajectoryManager.ShowTrajectory();
+        }
+        else
+        {
+            Debug.LogError("TrajectoryManager instance not found in the scene.");
+        }
     }
 
     void PlayTrophySound()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using VelUtils;
+using System.IO;
 
 
 public class TrajectoryManager : MonoBehaviour
@@ -28,6 +29,7 @@ public class TrajectoryManager : MonoBehaviour
             Debug.LogError("Rig Transform not assigned!");
             return;
         }
+        lineRenderer.enabled = false;
 
         lastPosition = rigTransform.position;
 
@@ -80,6 +82,24 @@ public class TrajectoryManager : MonoBehaviour
             lineRenderer.startColor = lineColor;
             lineRenderer.endColor = lineColor;
         }
+    }
+    public void ShowTrajectory()
+    {
+        lineRenderer.enabled = true;
+    }
+
+    public void ExportData()
+    {
+        string path = "Path_to_your_directory/trajectoryData.txt";
+        StreamWriter writer = new StreamWriter(path, false); 
+
+        foreach (TrajectoryData data in trajectoryList)
+        {
+            string line = $"{data.position.x},{data.position.y},{data.position.z}";
+            writer.WriteLine(line);
+        }
+
+        writer.Close();
     }
 }
 
