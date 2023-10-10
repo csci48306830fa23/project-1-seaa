@@ -8,9 +8,8 @@ public class TrophyBox : MonoBehaviour
     public int tokenCount = 0;
     public GameData gameData;
     public GameObject tokenPrefab;
-    public GameObject trophyPrize; 
+    public GameObject trophyPrefab;
     private Vector3 spawnOffset = new Vector3(0, 1, 0);
-
     public AudioSource trophySoundSource;
 
     public AudioClip coinSound;
@@ -43,12 +42,12 @@ public class TrophyBox : MonoBehaviour
   
     void GiveTrophy()
     {
-        Instantiate(trophyPrize, this.transform.position+new Vector3(0,2,0), Quaternion.identity);
+        Instantiate(trophyPrefab, this.transform.position+new Vector3(0,2,0), Quaternion.identity);
         PlayTrophySound();
-        TrajectoryManager trajectoryManager = FindObjectOfType<TrajectoryManager>();
-        if (trajectoryManager != null)
+        TrajectoryVisualizer trajectoryVisualizer = FindObjectOfType<TrajectoryVisualizer>();
+        if (trajectoryVisualizer != null)
         {
-            trajectoryManager.ShowTrajectory();
+            trajectoryVisualizer.VisualizeTrajectory();
         }
         else
         {

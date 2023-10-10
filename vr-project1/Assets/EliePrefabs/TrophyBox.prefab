@@ -102,6 +102,6 @@ MonoBehaviour:
   tokenCount: 0
   gameData: {fileID: 11400000, guid: 3ea7b44a43ed84284a4046ed1813f169, type: 2}
   tokenPrefab: {fileID: 3349875943387963603, guid: eb5af7898d1384893be51085a5059dad, type: 3}
-  trophyPrize: {fileID: 523296863197713631, guid: 538bcded1e8a64f369a07b4a7f1fd055, type: 3}
+  trophyPrefab: {fileID: 523296863197713631, guid: 538bcded1e8a64f369a07b4a7f1fd055, type: 3}
   trophySoundSource: {fileID: 0}
   coinSound: {fileID: 8300000, guid: a1624f602abfe43fab6717ce5e679f3f, type: 3}

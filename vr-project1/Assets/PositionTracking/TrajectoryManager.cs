@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VelUtils;
 using System.IO;
+using UnityEngine.UI;
 
 
 public class TrajectoryManager : MonoBehaviour
@@ -17,6 +18,9 @@ public class TrajectoryManager : MonoBehaviour
 
     [SerializeField]
     Transform rigTransform; 
+
+    public Button viewTrajectoryButton;
+
     private List<TrajectoryData> trajectoryList = new List<TrajectoryData>();
     private Vector3 lastPosition;
     private LineRenderer lineRenderer;
@@ -86,6 +90,12 @@ public class TrajectoryManager : MonoBehaviour
     public void ShowTrajectory()
     {
         lineRenderer.enabled = true;
+    }
+
+      public void OnGameCompleted()
+    {
+        viewTrajectoryButton.gameObject.SetActive(true); 
+        viewTrajectoryButton.onClick.AddListener(ShowTrajectory); 
     }
 
     public void ExportData()
