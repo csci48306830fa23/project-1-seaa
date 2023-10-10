@@ -26,7 +26,7 @@ public class Dart : MonoBehaviour
     [SerializeField]
     GameObject dartHitSoundPrefab;
     public Boolean playSound = true;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -76,7 +76,7 @@ public class Dart : MonoBehaviour
         //this.GetComponent<Rigidbody>().isKinematic = false;
         //this.GetComponent<Rigidbody>().useGravity = true;
     }
-    
+
     private void OnCollisionEnter(Collision collision)
     {
         /*
@@ -104,7 +104,7 @@ public class Dart : MonoBehaviour
         }
         */
 
-        Debug.Log("collision detected");
+        //Debug.Log("collision detected");
         DartStand db = collision.gameObject.GetComponent<DartStand>();
         if (db != null)
         {
@@ -147,7 +147,7 @@ public class Dart : MonoBehaviour
         this.GetComponent<Rigidbody>().useGravity = true;
     }
     */
-    
+
     private void OnTriggerExit(Collider other)
     {
 
@@ -161,7 +161,7 @@ public class Dart : MonoBehaviour
         //this.GetComponent<Rigidbody>().isKinematic = false;
         //this.GetComponent<Rigidbody>().useGravity = true;
     }
-    
+
 
     public void returnToSpawn()
     {
@@ -173,9 +173,10 @@ public class Dart : MonoBehaviour
     }
     public void stick()
     {
-        this.GetComponent<Rigidbody>().isKinematic = true;
         this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
-        
+        this.GetComponent<Rigidbody>().isKinematic = true;
+
+
         //this.GetComponent<Rigidbody>().velocity = new Vector3(0.0f, 0.0f, 0.0f);
         this.GetComponent<Rigidbody>().useGravity = false;
     }
