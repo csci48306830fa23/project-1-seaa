@@ -31,6 +31,7 @@ public class BullsEye : MonoBehaviour
         if (d != null)
         {
             d.stick();
+            d.hitSound();
             bullsEyeText.GetComponent<MeshRenderer>().enabled = true;
 
             if (!tokenSpawned)

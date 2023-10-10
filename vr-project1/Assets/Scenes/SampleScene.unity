@@ -443,7 +443,7 @@ PrefabInstance:
     - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: dartPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 987495811}
     - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: tokenPrefab
       value: 
@@ -456,6 +456,10 @@ PrefabInstance:
       propertyPath: tokenSpawnPoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
+      propertyPath: dartHitSoundPrefab
+      value: 
+      objectReference: {fileID: 1944122849368856560, guid: 635eb2cc95d147b448d3ba6cb90f8400, type: 3}
     - target: {fileID: 3715165783995201883, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -528,6 +532,10 @@ PrefabInstance:
       propertyPath: tokenSpawnPoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7741081793565080517, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
+      propertyPath: dartHitSoundPrefab
+      value: 
+      objectReference: {fileID: 1944122849368856560, guid: 635eb2cc95d147b448d3ba6cb90f8400, type: 3}
     - target: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: leftHand
       value: 
@@ -539,7 +547,7 @@ PrefabInstance:
     - target: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: dartPrefab
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 443334178}
     - target: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: tokenPrefab
       value: 
@@ -552,6 +560,10 @@ PrefabInstance:
       propertyPath: tokenSpawnPoint
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
+      propertyPath: dartHitSoundPrefab
+      value: 
+      objectReference: {fileID: 1944122849368856560, guid: 635eb2cc95d147b448d3ba6cb90f8400, type: 3}
     - target: {fileID: 8054973766934358635, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 4
