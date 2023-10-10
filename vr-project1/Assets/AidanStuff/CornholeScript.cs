@@ -11,8 +11,6 @@ public class CornholeScript : MonoBehaviour
     void Start()
     {
         spawnBag();
-        spawnBag();
-        spawnBag();
     }
 
     void spawnBag()
