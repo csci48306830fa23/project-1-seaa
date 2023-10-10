@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class TrophyBox : MonoBehaviour
 {
     public int tokenCount = 0;
-    public GameObject player;
+    public GameData gameData;
+    [SerializeField]
+    GameObject player;
     public GameObject tokenPrefab;
     public GameObject trophyPrize; 
     public Transform trophySpawnPoint; 
@@ -16,11 +18,20 @@ public class TrophyBox : MonoBehaviour
 
     public AudioSource trophySoundSource;
 
+    private void Start() 
+    {
+       
+    }
+
     private void OnTriggerEnter(Collider other)
     {
          if (other.gameObject == player)
         {
-            depositButton.gameObject.SetActive(true);
+            if (CheckTokens())
+            {
+                depositButton.gameObject.SetActive(true);
+            }
+                
         }
 
     }
@@ -33,6 +44,11 @@ public class TrophyBox : MonoBehaviour
         }
     }
 
+    private bool CheckTokens()
+    {
+        return (gameData.tokensCollected >= 2);
+       
+    }
     public void OnDepositButtonClicked()
     {
         Renderer trophyBoxRenderer = GetComponent<Renderer>();
