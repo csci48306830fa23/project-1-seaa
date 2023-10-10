@@ -12,6 +12,11 @@ public class TrajectoryVisualizer : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
     }
 
+    private void Start()
+    {
+        lineRenderer.enabled = false;
+    }
+
     public void VisualizeTrajectory()
     {
         if (trajectoryData && lineRenderer)
@@ -23,6 +28,7 @@ public class TrajectoryVisualizer : MonoBehaviour
             {
                 lineRenderer.SetPosition(i, trajectoryData.trajectoryDataList[i].position);
             }
+            lineRenderer.enabled = true; 
         }
     }
 }
