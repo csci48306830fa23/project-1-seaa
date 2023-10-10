@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class TrophyBox : MonoBehaviour
 {
     public int tokenCount = 0;
-    public GameObject player;
+    [SerializeField]
+    GameObject player;
     public GameObject tokenPrefab;
     public GameObject trophyPrize; 
     public Transform trophySpawnPoint; 
@@ -16,11 +17,16 @@ public class TrophyBox : MonoBehaviour
 
     public AudioSource trophySoundSource;
 
+    private void Start() 
+    {
+       
+    }
+
     private void OnTriggerEnter(Collider other)
     {
          if (other.gameObject == player)
         {
-            depositButton.gameObject.SetActive(true);
+                depositButton.gameObject.SetActive(true);
         }
 
     }
