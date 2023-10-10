@@ -446,7 +446,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 494931316}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Dart, Assembly-CSharp
         m_MethodName: returnToSpawn
         m_Mode: 1
@@ -458,7 +458,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 494931315}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Dart, Assembly-CSharp
         m_MethodName: returnToSpawn
         m_Mode: 1
@@ -587,7 +587,7 @@ PrefabInstance:
     - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: dartPrefab
       value: 
-      objectReference: {fileID: 494931316}
+      objectReference: {fileID: 0}
     - target: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: tokenPrefab
       value: 
@@ -663,7 +663,7 @@ PrefabInstance:
     - target: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: dartPrefab
       value: 
-      objectReference: {fileID: 494931315}
+      objectReference: {fileID: 0}
     - target: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
       propertyPath: tokenPrefab
       value: 
@@ -737,28 +737,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 471da151f16abab48819d964ad4bec24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &494931315 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7778556858498345174, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
-  m_PrefabInstance: {fileID: 494931312}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e32a1910426dc40a101ea31829cda4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &494931316 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3433935510705416414, guid: 433978c19ff624542b82924c1ffb76fe, type: 3}
-  m_PrefabInstance: {fileID: 494931312}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2e32a1910426dc40a101ea31829cda4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &500171260 stripped
@@ -1292,8 +1270,8 @@ MonoBehaviour:
   tokenPrefab: {fileID: 5203118723443404815, guid: 6779d767a1d292846a64bd8468f19fb9, type: 3}
   bullsEyeText: {fileID: 494931314}
   tokenSpawnPoint: {fileID: 1043772400}
-  dartPrefab1: {fileID: 494931316}
-  dartPrefab2: {fileID: 494931315}
+  dartPrefab1: {fileID: 0}
+  dartPrefab2: {fileID: 0}
   dartPrefab3: {fileID: 494931313}
 --- !u!1001 &782628375
 PrefabInstance:
@@ -2288,6 +2266,11 @@ Transform:
   - {fileID: 733299086}
   m_Father: {fileID: 1425711854}
   m_LocalEulerAnglesHint: {x: 0, y: 67.983, z: 0}
+--- !u!4 &1334794496 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6777277523045891329, guid: eed74f4c73a6dc746b57b96162137a8e, type: 3}
+  m_PrefabInstance: {fileID: 782628375}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1425711853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3855,8 +3838,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 93669093665426946, guid: a58dd0025df84419895b5ff7de731787, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6215799348643192261}
   m_SourcePrefab: {fileID: 100100000, guid: a58dd0025df84419895b5ff7de731787, type: 3}
+--- !u!1 &6215799348643192260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 93669093665426946, guid: a58dd0025df84419895b5ff7de731787, type: 3}
+  m_PrefabInstance: {fileID: 6215799348643192259}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6215799348643192261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215799348643192260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4b0737a1677430a8221f6b1cde6c41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigTransform: {fileID: 1334794496}
 --- !u!4 &8512865628835818902
 Transform:
   m_ObjectHideFlags: 0

@@ -14,45 +14,76 @@ public class TrajectoryManager : MonoBehaviour
         public Vector3 velocity;
     }
 
+    [SerializeField]
+    Transform rigTransform; 
     private List<TrajectoryData> trajectoryList = new List<TrajectoryData>();
     private Vector3 lastPosition;
     private LineRenderer lineRenderer;
-
-    private VRObject vrObject; 
+    private float maxVelocity = 0f;
 
     private void Start()
     {
-        lineRenderer = gameObject.AddComponent<LineRenderer>();
-        lineRenderer.material = new Material(Shader.Find("Standard"));
-        
-        vrObject = GetComponent<VRObject>();
-
-        if (vrObject == null)
+        if (!rigTransform)
         {
-            Debug.LogError("VRObject script not found on this GameObject.");
+            Debug.LogError("Rig Transform not assigned!");
             return;
         }
 
-        lastPosition = vrObject.transform.position;
+        lastPosition = rigTransform.position;
+
+        // Setup LineRenderer
+        lineRenderer = gameObject.AddComponent<LineRenderer>();
+        lineRenderer.material = new Material(Shader.Find("Standard"));
+        lineRenderer.widthCurve = new AnimationCurve(new Keyframe(0, 0.05f), new Keyframe(1, 0.05f)); // Setting the width of the line
     }
 
     private void Update()
     {
-        Vector3 currentPosition = vrObject.transform.position;
+        if (!rigTransform)
+        {
+            Debug.LogError("Rig Transform not assigned!");
+            return;
+        }
+
+        Vector3 currentPosition = rigTransform.position;
         Vector3 currentVelocity = (currentPosition - lastPosition) / Time.deltaTime;
+
+        if (currentVelocity.magnitude > maxVelocity)
+        {
+            maxVelocity = currentVelocity.magnitude;
+        }
 
         TrajectoryData data = new TrajectoryData
         {
             position = currentPosition,
-            upVector = vrObject.transform.up,
-            forwardVector = vrObject.transform.forward,
+            upVector = rigTransform.up,
+            forwardVector = rigTransform.forward,
             velocity = currentVelocity
         };
 
         trajectoryList.Add(data);
-        lastPosition = currentPosition;  
-        
+        lastPosition = currentPosition;
+
+        UpdateTrajectoryVisualization();
+    }
+
+    private void UpdateTrajectoryVisualization()
+    {
+        lineRenderer.positionCount = trajectoryList.Count;
+
+        for (int i = 0; i < trajectoryList.Count; i++)
+        {
+            lineRenderer.SetPosition(i, trajectoryList[i].position);
+
+            float velocityMagnitude = trajectoryList[i].velocity.magnitude;
+            Color lineColor = Color.Lerp(Color.green, Color.red, velocityMagnitude / maxVelocity);
+            lineRenderer.startColor = lineColor;
+            lineRenderer.endColor = lineColor;
+        }
     }
 }
+
+
+
 
 
