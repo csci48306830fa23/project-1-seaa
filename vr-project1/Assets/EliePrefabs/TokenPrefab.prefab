@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsToAdd: 1
+  gameData: {fileID: 11400000, guid: 3ea7b44a43ed84284a4046ed1813f169, type: 2}
 --- !u!114 &-8382070548721948125
 MonoBehaviour:
   m_ObjectHideFlags: 0

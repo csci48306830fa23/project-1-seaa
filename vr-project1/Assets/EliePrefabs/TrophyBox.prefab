@@ -97,8 +97,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tokenCount: 0
+  gameData: {fileID: 11400000, guid: 3ea7b44a43ed84284a4046ed1813f169, type: 2}
+  player: {fileID: 0}
+  tokenPrefab: {fileID: 0}
   trophyPrize: {fileID: 4592070669181049951, guid: 62aa73ca43ba04bae9969cd2797cc8c6, type: 3}
   trophySpawnPoint: {fileID: 0}
+  coinsToSpawn: 3
+  spawnOffset: {x: 0, y: 1, z: 0}
+  depositButton: {fileID: 0}
   trophySoundSource: {fileID: 0}
 --- !u!135 &-8650619723577054474
 SphereCollider:
