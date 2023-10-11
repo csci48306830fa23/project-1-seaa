@@ -10,6 +10,9 @@ public class HoleTrigger : MonoBehaviour
 
     [SerializeField]
     Transform position;
+
+    [SerializeField]
+    AudioSource confirm;
     
     void Start(){
 
@@ -34,6 +37,7 @@ public class HoleTrigger : MonoBehaviour
             {
                 spawnToken();
                 tokenWin = true;
+            confirm.Play();
             }
     }
 
