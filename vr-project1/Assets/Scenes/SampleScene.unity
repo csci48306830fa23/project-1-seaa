@@ -523,6 +523,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 225011297, guid: 538bcded1e8a64f369a07b4a7f1fd055, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 782628378}
+    - target: {fileID: 225011297, guid: 538bcded1e8a64f369a07b4a7f1fd055, type: 3}
+      propertyPath: skyPosition
+      value: 
+      objectReference: {fileID: 23127015779010652, guid: d8e9c559c702544d78cc06b3f7f3a776, type: 3}
     - target: {fileID: 523296863197713631, guid: 538bcded1e8a64f369a07b4a7f1fd055, type: 3}
       propertyPath: m_Name
       value: TrophyPrefab
