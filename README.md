@@ -2,7 +2,7 @@
 Andrew Vo  
 Aidan Alvillar  
 Sohan Shankar  
-Eliana Gelman
+Eliana Gelman  
 <img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">
 
 
