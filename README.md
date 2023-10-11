@@ -3,6 +3,9 @@ Andrew Vo
 <img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/avo.png?raw=true" width="100">  
 Aidan Alvillar  
 Sohan Shankar  
+<img src="https://github.com/csci48306830fa23/project-1-seaa/assets/119974810/fb9cb79a-220a-4cc6-8f47-b5eb7378d50e" width="100">  
+
+
 Eliana Gelman  
 <img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">  
 
@@ -23,7 +26,7 @@ Navigating the relationship between prefab instances in the scene versus their o
 Lightmapping takes a long time and if it renders in a way that is unsatisfactory, it is a long process to redo and uses up precious time that could have been used to work on the rest of the project.
 
 ## Video Demo  
-(pretend there is a video here for now)
+[![Link to the demo of the project](http://img.youtube.com/vi/oDR4P2_qsS8/0.jpg)](http://www.youtube.com/watch?v=oDR4P2_qsS8 "CSCI4830 VR Project 1")
 
 ## Credits
 Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/  
