@@ -26,7 +26,7 @@ Navigating the relationship between prefab instances in the scene versus their o
 Lightmapping takes a long time and if it renders in a way that is unsatisfactory, it is a long process to redo and uses up precious time that could have been used to work on the rest of the project.
 
 ## Video Demo  
-(pretend there is a video here for now)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oDR4P2_qsS8?si=bFaHsnB6xmUc4ixp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
 
 ## Credits
 Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/  
