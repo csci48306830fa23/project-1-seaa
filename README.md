@@ -28,3 +28,6 @@ Lightmapping takes a long time and if it renders in a way that is unsatisfactory
 ## Credits
 Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/  
 Winning Sounds: https://freesound.org/people/theredshore/sounds/83980/
+BBC Audio Library: https://sound-effects.bbcrewind.co.uk/licensing
+Kenney Game Assets: https://kenney.nl/
+TurboSquid: https://www.turbosquid.com/
