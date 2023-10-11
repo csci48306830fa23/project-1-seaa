@@ -1,13 +1,14 @@
 ## Project Contributors
 Andrew Vo  
+<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/avo.png?raw=true" width="100">  
 Aidan Alvillar  
 Sohan Shankar  
 Eliana Gelman  
-<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">
+<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">  
 
 
 ## Description  
-Our game is about navigating a small carnival maze to find and play three minigames to obtain coins that can be turned in for a trophy at the end. The games are obscured within tents, and once you find them you can execute a dart game, a cornhole game, and a cup game. Each game will yield you a coin. Once all three coins are found, you have to carry them to their deposit location. Once deposited, you will receive a trophy. Grabbing the trophy will end the game and show you your path taken throughout the game. The path will be written to a JSON file.  
+Our game entails navigating a small carnival maze to find and play three minigames to obtain coins that can be turned in for a trophy. The games are obscured within tents, and once you find them, you can execute a dart game, a cornhole game, and a cup game. Each game will yield you a coin upon completion. Once all three coins are found, you have to carry them to their deposit location. Once deposited, you will receive a trophy. Grabbing the trophy will end the game and show you the path you have taken throughout the game. The path will also be written to a JSON file.  
 
 ## Problems Encountered  
 The biggest issue that we encountered early on was having loads of merge conflicts when we were trying to work together at the same time. 
@@ -20,3 +21,10 @@ Regardless, the rest of the group still finished their work to the best of their
 Navigating the relationship between prefab instances in the scene versus their original prefabs and the fact that the Player rig can only be connected to instances in the scene was difficult for the grad portion of the project.  
 
 Lightmapping takes a long time and if it renders in a way that is unsatisfactory, it is a long process to redo and uses up precious time that could have been used to work on the rest of the project.
+
+## Video Demo  
+(pretend there is a video here for now)
+
+## Credits
+Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/  
+Winning Sounds: https://freesound.org/people/theredshore/sounds/83980/
