@@ -29,7 +29,7 @@ public class TrophyBox : MonoBehaviour
             tokenCount++;
             AudioSource.PlayClipAtPoint(coinSound, trophySoundSource.transform.position);
             
-            if (tokenCount >= 2)
+            if (tokenCount >= 3)
             {
                 GiveTrophy();
             }
@@ -38,7 +38,7 @@ public class TrophyBox : MonoBehaviour
 
     private bool CheckTokens()
     {
-        return (gameData.tokensCollected >= 2);
+        return (gameData.tokensCollected >= 3);
        
     }
   
