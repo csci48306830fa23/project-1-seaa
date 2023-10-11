@@ -5,13 +5,10 @@ using UnityEngine;
 public class TrajectoryCollector : MonoBehaviour
 {
     public TrajectoryDataObject trajectoryData;
-    private LineRenderer lineRenderer;
 
     private void Start()
     {
         trajectoryData.ClearData();
-        lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.enabled = false;
     }
 
     private void Update()
