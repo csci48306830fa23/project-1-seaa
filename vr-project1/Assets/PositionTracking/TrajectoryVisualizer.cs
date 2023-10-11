@@ -7,6 +7,7 @@ public class TrajectoryVisualizer : MonoBehaviour
 {
     public TrajectoryDataObject trajectoryData;
     private LineRenderer lineRenderer;
+ 
 
     private void Awake()
     {
@@ -27,7 +28,7 @@ public class TrajectoryVisualizer : MonoBehaviour
 
             for (int i = 0; i < dataCount; i++)
             {
-                lineRenderer.SetPosition(i, trajectoryData.trajectoryDataList[i].position);
+                lineRenderer.SetPosition(i, trajectoryData.trajectoryDataList[i].position+new Vector3(0,5,0));
             }
             lineRenderer.enabled = true; 
         }
