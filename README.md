@@ -8,7 +8,7 @@ Eliana Gelman
 
 
 ## Description  
-Our game is about navigating a small carnival maze to find and play three minigames to obtain coins that can be turned in for a trophy at the end. The games are obscured within tents, and once you find them you can execute a dart game, a cornhole game, and a cup game. Each game will yield you a coin. Once all three coins are found, you have to carry them to their deposit location. Once deposited, you will receive a trophy. Grabbing the trophy will end the game and show you your path taken throughout the game. The path will be written to a JSON file.  
+Our game entails navigating a small carnival maze to find and play three minigames to obtain coins that can be turned in for a trophy. The games are obscured within tents, and once you find them, you can execute a dart game, a cornhole game, and a cup game. Each game will yield you a coin upon completion. Once all three coins are found, you have to carry them to their deposit location. Once deposited, you will receive a trophy. Grabbing the trophy will end the game and show you the path you have taken throughout the game. The path will also be written to a JSON file.  
 
 ## Problems Encountered  
 The biggest issue that we encountered early on was having loads of merge conflicts when we were trying to work together at the same time. 
