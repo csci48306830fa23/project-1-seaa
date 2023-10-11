@@ -3,6 +3,9 @@ Andrew Vo
 <img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/avo.png?raw=true" width="100">  
 Aidan Alvillar  
 Sohan Shankar  
+<img src="https://github.com/csci48306830fa23/project-1-seaa/assets/119974810/fb9cb79a-220a-4cc6-8f47-b5eb7378d50e" width="100">  
+
+
 Eliana Gelman  
 <img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">  
 
