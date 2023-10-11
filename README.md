@@ -1,10 +1,10 @@
 ## Project Contributors
 Andrew Vo  
-<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/avo.png?raw=true" width="100">
+<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/avo.png?raw=true" width="100">  
 Aidan Alvillar  
 Sohan Shankar  
 Eliana Gelman  
-<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">
+<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true" width="100">  
 
 
 ## Description  
