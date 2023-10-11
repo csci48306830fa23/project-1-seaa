@@ -1,5 +1,6 @@
 ## Project Contributors
 Andrew Vo  
+<img src="https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/avo.png?raw=true" width="100">
 Aidan Alvillar  
 Sohan Shankar  
 Eliana Gelman  
@@ -20,3 +21,6 @@ Regardless, the rest of the group still finished their work to the best of their
 Navigating the relationship between prefab instances in the scene versus their original prefabs and the fact that the Player rig can only be connected to instances in the scene was difficult for the grad portion of the project.  
 
 Lightmapping takes a long time and if it renders in a way that is unsatisfactory, it is a long process to redo and uses up precious time that could have been used to work on the rest of the project.
+
+## Video Demo  
+(pretend there is a video here for now)
