@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 8747399541026182986}
   - component: {fileID: 7537925614370393672}
   - component: {fileID: 5360899783295356530}
+  - component: {fileID: 7640696712626955276}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -210,6 +211,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7640696712626955276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5606553269080485266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25b81f189b6d3a64f9998c9419b3e2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tokenPrefab: {fileID: 3349875943387963603, guid: eb5af7898d1384893be51085a5059dad, type: 3}
+  position: {fileID: 7246950005557467351}
 --- !u!1 &6728850136960037057
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +266,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5664591389971199104}
   - component: {fileID: 5127601979364707940}
-  - component: {fileID: -8210838710595384033}
   m_Layer: 0
   m_Name: Cornhole
   m_TagString: Untagged
@@ -293,20 +307,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsToAdd: 1
   gameData: {fileID: 0}
---- !u!114 &-8210838710595384033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9221005160203588157}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25b81f189b6d3a64f9998c9419b3e2f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tokenPrefab: {fileID: 3349875943387963603, guid: eb5af7898d1384893be51085a5059dad, type: 3}
-  position: {fileID: 6908333960034170896, guid: 2f6c0d5bdda919542a32b455449947c7, type: 3}
 --- !u!1001 &2303122191972845527
 PrefabInstance:
   m_ObjectHideFlags: 0
