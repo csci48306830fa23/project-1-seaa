@@ -26,5 +26,5 @@ Lightmapping takes a long time and if it renders in a way that is unsatisfactory
 (pretend there is a video here for now)
 
 ## Credits
-Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/
+Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/  
 Winning Sounds: https://freesound.org/people/theredshore/sounds/83980/
