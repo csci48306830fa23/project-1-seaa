@@ -26,7 +26,7 @@ Navigating the relationship between prefab instances in the scene versus their o
 Lightmapping takes a long time and if it renders in a way that is unsatisfactory, it is a long process to redo and uses up precious time that could have been used to work on the rest of the project.
 
 ## Video Demo  
-[![Link to the demo of the project](http://img.youtube.com/vi/oDR4P2_qsS8/0.jpg)](http://www.youtube.com/watch?v=oDR4P2_qsS8 "CSCI4830 VR Project 1")
+[![Link to the demo of the project](http://img.youtube.com/vi/oDR4P2_qsS8/0.jpg)](https://youtu.be/Lm7pv9Kto4Y?si=rA0YvawQ8GO2W61A "CSCI4830 VR Project 1")
 
 ## Credits
 Coin Sounds: https://freesound.org/people/colorsCrimsonTears/sounds/566201/  
