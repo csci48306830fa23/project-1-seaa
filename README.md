@@ -2,8 +2,9 @@
 Andrew Vo  
 Aidan Alvillar  
 Sohan Shankar  
-Eliana Gelman 
-![eliana pic](https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true)
+Eliana Gelman
+<img src="[URL_TO_THE_IMAGE](https://github.com/csci48306830fa23/project-1-seaa/blob/main/vr-project1/Gelman-Eliana.jpg?raw=true)" width="100">
+
 
 ## Description  
 Our game is about navigating a small carnival maze to find and play three minigames to obtain coins that can be turned in for a trophy at the end. The games are obscured within tents, and once you find them you can execute a dart game, a cornhole game, and a cup game. Each game will yield you a coin. Once all three coins are found, you have to carry them to their deposit location. Once deposited, you will receive a trophy. Grabbing the trophy will end the game and show you your path taken throughout the game. The path will be written to a JSON file.  
