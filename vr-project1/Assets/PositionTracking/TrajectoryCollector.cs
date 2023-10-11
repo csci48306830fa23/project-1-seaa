@@ -6,6 +6,7 @@ public class TrajectoryCollector : MonoBehaviour
 {
     public TrajectoryDataObject trajectoryData;
 
+
     private void Start()
     {
         trajectoryData.ClearData();
@@ -14,5 +15,8 @@ public class TrajectoryCollector : MonoBehaviour
     private void Update()
     {
         trajectoryData.AddData(transform.position, transform.up, transform.forward);
+        
     }
+
 }
+

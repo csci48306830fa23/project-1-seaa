@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class TrajectoryVisualizer : MonoBehaviour
 {
@@ -30,5 +31,18 @@ public class TrajectoryVisualizer : MonoBehaviour
             }
             lineRenderer.enabled = true; 
         }
+    }
+
+    public void ExportTrajectoryData(TrajectoryDataObject trajectoryDataObject)
+    {
+        if (trajectoryData)
+        {
+            string jsonData = JsonUtility.ToJson(trajectoryDataObject, true);
+            string path = Path.Combine(Application.persistentDataPath, "trajectoryData.json");
+            File.WriteAllText(path, jsonData);
+
+            Debug.Log("Data saved to: " + path);
+        
+        }  
     }
 }

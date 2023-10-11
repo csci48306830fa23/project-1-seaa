@@ -14,6 +14,8 @@ public class TrophyBox : MonoBehaviour
 
     public AudioClip coinSound;
 
+    public TrajectoryDataObject trajectoryData;
+
     private void Start() 
     {
        
@@ -45,6 +47,7 @@ public class TrophyBox : MonoBehaviour
         trophyPrefab.SetActive(true); 
         PlayTrophySound();
         TrajectoryVisualizer trajectoryVisualizer = FindObjectOfType<TrajectoryVisualizer>();
+
     }
 
     void ShowTrajectory()
@@ -53,6 +56,7 @@ public class TrophyBox : MonoBehaviour
         if (trajectoryVisualizer != null)
         {
             trajectoryVisualizer.VisualizeTrajectory();
+            trajectoryVisualizer.ExportTrajectoryData(trajectoryData);
         }
         else
         {
