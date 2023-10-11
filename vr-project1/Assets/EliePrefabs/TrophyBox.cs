@@ -42,8 +42,13 @@ public class TrophyBox : MonoBehaviour
   
     void GiveTrophy()
     {
-        Instantiate(trophyPrefab, this.transform.position+new Vector3(0,2,0), Quaternion.identity);
+        trophyPrefab.SetActive(true); 
         PlayTrophySound();
+        TrajectoryVisualizer trajectoryVisualizer = FindObjectOfType<TrajectoryVisualizer>();
+    }
+
+    void ShowTrajectory()
+    {
         TrajectoryVisualizer trajectoryVisualizer = FindObjectOfType<TrajectoryVisualizer>();
         if (trajectoryVisualizer != null)
         {
@@ -54,7 +59,6 @@ public class TrophyBox : MonoBehaviour
             Debug.LogError("TrajectoryManager instance not found in the scene.");
         }
     }
-
     void PlayTrophySound()
     {
         if (trophySoundSource && !trophySoundSource.isPlaying)

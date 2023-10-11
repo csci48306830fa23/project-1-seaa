@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using VelUtils.VRInteraction;
 using DG.Tweening;
+using VelUtils;
+using System.Collections.Specialized;
 
 public class Trophy : MonoBehaviour
 {
-    public GameObject player;
+    [SerializeField]
+    GameObject player;
     public Transform skyPosition;
     void Start()
     {
