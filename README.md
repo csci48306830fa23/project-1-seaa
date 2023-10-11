@@ -34,3 +34,8 @@ Winning Sounds: https://freesound.org/people/theredshore/sounds/83980/
 BBC Audio Library: https://sound-effects.bbcrewind.co.uk/licensing
 Kenney Game Assets: https://kenney.nl/
 TurboSquid: https://www.turbosquid.com/
+Dart Sound: https://freesound.org/
+Dart Board Texture: https://pngfre.com/
+Grass Texture: https://freestocktextures.com/
+Gold Coin and Grass Texture: https://www.rawpixel.com/
+
